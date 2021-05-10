@@ -9,6 +9,19 @@ See test cases for more examples.
 Input will consist of alphabet characters, both uppercase and lowercase. No spaces.
 */
 
-function solve(arr){  
-//code
+const solve = (arr) => {  
+  let alpha = 'abcdefghijklmnopqrstuvwxyz';
+  let array = [];
+  let count = 0;
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr[i].length; j++) {
+      if(arr[i][j].toLowerCase() === alpha[j]) {
+        count++;
+      }
+    }
+    array.push(count);
+    count = 0;
+  }
+
+  return array;
 };
